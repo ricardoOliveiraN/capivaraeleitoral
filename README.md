@@ -55,3 +55,33 @@ somente leitura).
 - **Base de dados vetorial** com IA interna para responder dúvidas do usuário
   em linguagem natural, conectando a pergunta diretamente à base de dados.
 - Evolução do escopo para outras esferas (estadual e municipal) após o MVP.
+
+## Aplicação web (protótipo)
+
+Protótipo de interface construído com **Next.js 16 + TypeScript + Tailwind CSS**
+e **Recharts**, com dados ilustrativos em memória (`src/lib/data.ts`). Ainda não
+há integração com as fontes reais nem IA real — o chat é simulado.
+
+### O que já existe
+
+- **Home** com busca de candidatos e explicação do produto.
+- **Perfil** do candidato: progresso por tema (linhas), atuação por tema (barras),
+  histórico eleitoral e indicações/nomeações.
+- **Votações** filtráveis por tema e resultado (aprovado/reprovado).
+- **Promessas** de campanha com filtro por status e barra de avanço.
+- **Comparar** concorrentes: radar de temas, tabela de índices e ficha rápida.
+- **Match** por prioridades: sliders de peso por tema, presets e ranking de afinidade.
+- **Chat** simulado respondendo a partir dos dados do candidato.
+- Layout responsivo (header com menu mobile, navegação por abas).
+
+### Como rodar
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # build de produção
+npm run lint    # análise estática
+```
+
+> Os dados exibidos são fictícios e servem apenas para demonstração.
+
